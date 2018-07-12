@@ -29,6 +29,30 @@
                     </span>
                 </a>
                 <ul class="dropdown-menu" ngbDropdownMenu>
+                    <li>
+                        <a class="dropdown-item" routerLink="prenotazione" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
+                            <fa-icon [icon]="'asterisk'" [fixedWidth]="true"></fa-icon>
+                            <span jhiTranslate="global.menu.entities.prenotazione">Prenotazione</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" routerLink="negozio" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
+                            <fa-icon [icon]="'asterisk'" [fixedWidth]="true"></fa-icon>
+                            <span jhiTranslate="global.menu.entities.negozio">Negozio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" routerLink="servizio" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
+                            <fa-icon [icon]="'asterisk'" [fixedWidth]="true"></fa-icon>
+                            <span jhiTranslate="global.menu.entities.servizio">Servizio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" routerLink="operatore" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
+                            <fa-icon [icon]="'asterisk'" [fixedWidth]="true"></fa-icon>
+                            <span jhiTranslate="global.menu.entities.operatore">Operatore</span>
+                        </a>
+                    </li>
                     <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->
                 </ul>
             </li>

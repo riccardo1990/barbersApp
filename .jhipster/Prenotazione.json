@@ -1,0 +1,52 @@
+{
+    "name": "Prenotazione",
+    "fields": [
+        {
+            "fieldName": "codicePrenotazione",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "data",
+            "fieldType": "Instant",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "note",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "operatore",
+            "otherEntityName": "operatore",
+            "otherEntityField": "codiceOperatore"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "servizio",
+            "otherEntityName": "servizio",
+            "otherEntityField": "codiceServizio"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "negozio",
+            "otherEntityName": "negozio",
+            "otherEntityField": "codiceNegozio"
+        }
+    ],
+    "changelogDate": "20180712122020",
+    "entityTableName": "prenotazione",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

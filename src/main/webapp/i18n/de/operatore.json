@@ -1,0 +1,27 @@
+
+{
+    "barbersApp": {
+        "operatore" : {
+            "home": {
+                "title": "Operatores",
+                "createLabel": "Operatore erstellen",
+                "createOrEditLabel": "Operatore erstellen oder bearbeiten"
+            },
+            "created": "Operatore erstellt mit ID {{ param }}",
+            "updated": "Operatore aktualisiert mit ID {{ param }}",
+            "deleted": "Operatore gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Operatore {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Operatore"
+            },
+            "codiceOperatore": "Codice Operatore",
+            "nome": "Nome",
+            "cognome": "Cognome",
+            "note": "Note",
+            "fotoProfilo": "Foto Profilo",
+            "negozio": "Negozio"
+        }
+    }
+}

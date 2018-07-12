@@ -1,0 +1,26 @@
+
+{
+    "barbersApp": {
+        "servizio" : {
+            "home": {
+                "title": "Servizios",
+                "createLabel": "Servizio erstellen",
+                "createOrEditLabel": "Servizio erstellen oder bearbeiten"
+            },
+            "created": "Servizio erstellt mit ID {{ param }}",
+            "updated": "Servizio aktualisiert mit ID {{ param }}",
+            "deleted": "Servizio gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Servizio {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Servizio"
+            },
+            "codiceServizio": "Codice Servizio",
+            "descrizioneServizio": "Descrizione Servizio",
+            "durata": "Durata",
+            "costo": "Costo",
+            "fotoServizio": "Foto Servizio"
+        }
+    }
+}

@@ -1,0 +1,27 @@
+
+{
+    "barbersApp": {
+        "prenotazione" : {
+            "home": {
+                "title": "Prenotaziones",
+                "createLabel": "Create a new Prenotazione",
+                "createOrEditLabel": "Create or edit a Prenotazione"
+            },
+            "created": "A new Prenotazione is created with identifier {{ param }}",
+            "updated": "A Prenotazione is updated with identifier {{ param }}",
+            "deleted": "A Prenotazione is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Prenotazione {{ id }}?"
+            },
+            "detail": {
+                "title": "Prenotazione"
+            },
+            "codicePrenotazione": "Codice Prenotazione",
+            "data": "Data",
+            "note": "Note",
+            "operatore": "Operatore",
+            "servizio": "Servizio",
+            "negozio": "Negozio"
+        }
+    }
+}

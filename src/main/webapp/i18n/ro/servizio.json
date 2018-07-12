@@ -1,0 +1,26 @@
+
+{
+    "barbersApp": {
+        "servizio" : {
+            "home": {
+                "title": "Servizios",
+                "createLabel": "Creeare o nouă entitate Servizio",
+                "createOrEditLabel": "Creeare sau editare Servizio"
+            },
+            "created": "A fost creată o nouă entitate Servizio cu identificatorul {{ param }}",
+            "updated": "Servizio cu identificatorul {{ param }} a fost actualizată",
+            "deleted": "Servizio cu identificatorul {{ param }} a fost ștearsă",
+            "delete": {
+                "question": "Sunteți sigur că doriți să ștergeți Servizio {{ id }}?"
+            },
+            "detail": {
+                "title": "Servizio"
+            },
+            "codiceServizio": "Codice Servizio",
+            "descrizioneServizio": "Descrizione Servizio",
+            "durata": "Durata",
+            "costo": "Costo",
+            "fotoServizio": "Foto Servizio"
+        }
+    }
+}

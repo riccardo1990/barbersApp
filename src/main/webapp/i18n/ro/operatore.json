@@ -1,0 +1,27 @@
+
+{
+    "barbersApp": {
+        "operatore" : {
+            "home": {
+                "title": "Operatores",
+                "createLabel": "Creeare o nouă entitate Operatore",
+                "createOrEditLabel": "Creeare sau editare Operatore"
+            },
+            "created": "A fost creată o nouă entitate Operatore cu identificatorul {{ param }}",
+            "updated": "Operatore cu identificatorul {{ param }} a fost actualizată",
+            "deleted": "Operatore cu identificatorul {{ param }} a fost ștearsă",
+            "delete": {
+                "question": "Sunteți sigur că doriți să ștergeți Operatore {{ id }}?"
+            },
+            "detail": {
+                "title": "Operatore"
+            },
+            "codiceOperatore": "Codice Operatore",
+            "nome": "Nome",
+            "cognome": "Cognome",
+            "note": "Note",
+            "fotoProfilo": "Foto Profilo",
+            "negozio": "Negozio"
+        }
+    }
+}

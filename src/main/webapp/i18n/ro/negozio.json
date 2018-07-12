@@ -1,0 +1,28 @@
+
+{
+    "barbersApp": {
+        "negozio" : {
+            "home": {
+                "title": "Negozios",
+                "createLabel": "Creeare o nouă entitate Negozio",
+                "createOrEditLabel": "Creeare sau editare Negozio"
+            },
+            "created": "A fost creată o nouă entitate Negozio cu identificatorul {{ param }}",
+            "updated": "Negozio cu identificatorul {{ param }} a fost actualizată",
+            "deleted": "Negozio cu identificatorul {{ param }} a fost ștearsă",
+            "delete": {
+                "question": "Sunteți sigur că doriți să ștergeți Negozio {{ id }}?"
+            },
+            "detail": {
+                "title": "Negozio"
+            },
+            "codiceNegozio": "Codice Negozio",
+            "descrizioneNegozio": "Descrizione Negozio",
+            "indirizzo": "Indirizzo",
+            "cap": "Cap",
+            "citta": "Citta",
+            "telefono": "Telefono",
+            "operatore": "Operatore"
+        }
+    }
+}

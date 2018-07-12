@@ -1,0 +1,65 @@
+{
+    "name": "Negozio",
+    "fields": [
+        {
+            "fieldName": "codiceNegozio",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "descrizioneNegozio",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "indirizzo",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "cap",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "citta",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "telefono",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "operatore",
+            "otherEntityName": "operatore",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "negozio"
+        }
+    ],
+    "changelogDate": "20180712122021",
+    "entityTableName": "negozio",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

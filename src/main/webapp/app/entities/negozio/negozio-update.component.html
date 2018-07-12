@@ -1,0 +1,94 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-negozio-heading" jhiTranslate="barbersApp.negozio.home.createOrEditLabel">Create or edit a Negozio</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!negozio.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="negozio.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="barbersApp.negozio.codiceNegozio" for="field_codiceNegozio">Codice Negozio</label>
+                    <input type="text" class="form-control" name="codiceNegozio" id="field_codiceNegozio"
+                        [(ngModel)]="negozio.codiceNegozio" required/>
+                    <div [hidden]="!(editForm.controls.codiceNegozio?.dirty && editForm.controls.codiceNegozio?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.codiceNegozio?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="barbersApp.negozio.descrizioneNegozio" for="field_descrizioneNegozio">Descrizione Negozio</label>
+                    <input type="text" class="form-control" name="descrizioneNegozio" id="field_descrizioneNegozio"
+                        [(ngModel)]="negozio.descrizioneNegozio" required/>
+                    <div [hidden]="!(editForm.controls.descrizioneNegozio?.dirty && editForm.controls.descrizioneNegozio?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.descrizioneNegozio?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="barbersApp.negozio.indirizzo" for="field_indirizzo">Indirizzo</label>
+                    <input type="text" class="form-control" name="indirizzo" id="field_indirizzo"
+                        [(ngModel)]="negozio.indirizzo" required/>
+                    <div [hidden]="!(editForm.controls.indirizzo?.dirty && editForm.controls.indirizzo?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.indirizzo?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="barbersApp.negozio.cap" for="field_cap">Cap</label>
+                    <input type="number" class="form-control" name="cap" id="field_cap"
+                        [(ngModel)]="negozio.cap" required/>
+                    <div [hidden]="!(editForm.controls.cap?.dirty && editForm.controls.cap?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.cap?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.controls.cap?.errors?.number" jhiTranslate="entity.validation.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="barbersApp.negozio.citta" for="field_citta">Citta</label>
+                    <input type="text" class="form-control" name="citta" id="field_citta"
+                        [(ngModel)]="negozio.citta" required/>
+                    <div [hidden]="!(editForm.controls.citta?.dirty && editForm.controls.citta?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.citta?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="barbersApp.negozio.telefono" for="field_telefono">Telefono</label>
+                    <input type="text" class="form-control" name="telefono" id="field_telefono"
+                        [(ngModel)]="negozio.telefono" required/>
+                    <div [hidden]="!(editForm.controls.telefono?.dirty && editForm.controls.telefono?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.telefono?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

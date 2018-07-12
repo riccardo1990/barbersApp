@@ -1,0 +1,47 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="negozio">
+            <h2><span jhiTranslate="barbersApp.negozio.detail.title">Negozio</span> {{negozio.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="barbersApp.negozio.codiceNegozio">Codice Negozio</span></dt>
+                <dd>
+                    <span>{{negozio.codiceNegozio}}</span>
+                </dd>
+                <dt><span jhiTranslate="barbersApp.negozio.descrizioneNegozio">Descrizione Negozio</span></dt>
+                <dd>
+                    <span>{{negozio.descrizioneNegozio}}</span>
+                </dd>
+                <dt><span jhiTranslate="barbersApp.negozio.indirizzo">Indirizzo</span></dt>
+                <dd>
+                    <span>{{negozio.indirizzo}}</span>
+                </dd>
+                <dt><span jhiTranslate="barbersApp.negozio.cap">Cap</span></dt>
+                <dd>
+                    <span>{{negozio.cap}}</span>
+                </dd>
+                <dt><span jhiTranslate="barbersApp.negozio.citta">Citta</span></dt>
+                <dd>
+                    <span>{{negozio.citta}}</span>
+                </dd>
+                <dt><span jhiTranslate="barbersApp.negozio.telefono">Telefono</span></dt>
+                <dd>
+                    <span>{{negozio.telefono}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/negozio', negozio.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,78 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-prenotazione-heading" jhiTranslate="barbersApp.prenotazione.home.createOrEditLabel">Create or edit a Prenotazione</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!prenotazione.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="prenotazione.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="barbersApp.prenotazione.codicePrenotazione" for="field_codicePrenotazione">Codice Prenotazione</label>
+                    <input type="text" class="form-control" name="codicePrenotazione" id="field_codicePrenotazione"
+                        [(ngModel)]="prenotazione.codicePrenotazione" required/>
+                    <div [hidden]="!(editForm.controls.codicePrenotazione?.dirty && editForm.controls.codicePrenotazione?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.codicePrenotazione?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="barbersApp.prenotazione.data" for="field_data">Data</label>
+                    <div class="d-flex">
+                        <input id="field_data" type="datetime-local" class="form-control" name="data" [(ngModel)]="data"
+                        required/>
+                    </div>
+                    <div [hidden]="!(editForm.controls.data?.dirty && editForm.controls.data?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.data?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.controls.data?.errors?.ZonedDateTimelocal" jhiTranslate="entity.validation.ZonedDateTimelocal">
+                            This field should be a date and time.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="barbersApp.prenotazione.note" for="field_note">Note</label>
+                    <input type="text" class="form-control" name="note" id="field_note"
+                        [(ngModel)]="prenotazione.note" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="barbersApp.prenotazione.operatore" for="field_operatore">Operatore</label>
+                    <select class="form-control" id="field_operatore" name="operatore" [(ngModel)]="prenotazione.operatore" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="operatoreOption.id === prenotazione.operatore?.id ? prenotazione.operatore : operatoreOption" *ngFor="let operatoreOption of operatores; trackBy: trackOperatoreById">{{operatoreOption.codiceOperatore}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="barbersApp.prenotazione.servizio" for="field_servizio">Servizio</label>
+                    <select class="form-control" id="field_servizio" name="servizio" [(ngModel)]="prenotazione.servizio" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="servizioOption.id === prenotazione.servizio?.id ? prenotazione.servizio : servizioOption" *ngFor="let servizioOption of servizios; trackBy: trackServizioById">{{servizioOption.codiceServizio}}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="barbersApp.prenotazione.negozio" for="field_negozio">Negozio</label>
+                    <select class="form-control" id="field_negozio" name="negozio" [(ngModel)]="prenotazione.negozio" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="negozioOption.id === prenotazione.negozio?.id ? prenotazione.negozio : negozioOption" *ngFor="let negozioOption of negozios; trackBy: trackNegozioById">{{negozioOption.codiceNegozio}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

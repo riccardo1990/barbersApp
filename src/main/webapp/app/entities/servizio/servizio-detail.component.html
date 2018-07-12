@@ -1,0 +1,43 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="servizio">
+            <h2><span jhiTranslate="barbersApp.servizio.detail.title">Servizio</span> {{servizio.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="barbersApp.servizio.codiceServizio">Codice Servizio</span></dt>
+                <dd>
+                    <span>{{servizio.codiceServizio}}</span>
+                </dd>
+                <dt><span jhiTranslate="barbersApp.servizio.descrizioneServizio">Descrizione Servizio</span></dt>
+                <dd>
+                    <span>{{servizio.descrizioneServizio}}</span>
+                </dd>
+                <dt><span jhiTranslate="barbersApp.servizio.durata">Durata</span></dt>
+                <dd>
+                    <span>{{servizio.durata}}</span>
+                </dd>
+                <dt><span jhiTranslate="barbersApp.servizio.costo">Costo</span></dt>
+                <dd>
+                    <span>{{servizio.costo}}</span>
+                </dd>
+                <dt><span jhiTranslate="barbersApp.servizio.fotoServizio">Foto Servizio</span></dt>
+                <dd>
+                    <span>{{servizio.fotoServizio}}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/servizio', servizio.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

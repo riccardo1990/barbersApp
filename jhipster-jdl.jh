@@ -1,0 +1,43 @@
+
+entity Prenotazione{
+	codicePrenotazione String required,
+    data Instant required,
+    note String
+}
+
+entity Negozio{
+	codiceNegozio String required,
+    descrizioneNegozio String required,
+    indirizzo String required,
+    cap Integer required,
+    citta String required,
+    telefono String required
+}
+entity Servizio{
+	codiceServizio String required,
+	descrizioneServizio String required,
+	durata Integer required,
+	costo Double required,
+    fotoServizio TextBlob
+}
+
+entity Operatore{
+	codiceOperatore String required,
+	nome String required,
+	cognome String required,
+	note String required,
+    fotoProfilo TextBlob required
+}
+
+relationship ManyToOne {
+	Prenotazione{operatore(codiceOperatore)} to Operatore,
+    Prenotazione{servizio(codiceServizio)} to Servizio,
+    Prenotazione{negozio(codiceNegozio)} to Negozio
+}
+
+relationship ManyToMany {
+    Operatore{negozio(codiceNegozio)} to Negozio{operatore}
+}
+
+// Set pagination options
+paginate Prenotazione, Negozio with infinite-scroll

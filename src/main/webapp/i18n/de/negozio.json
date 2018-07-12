@@ -1,0 +1,28 @@
+
+{
+    "barbersApp": {
+        "negozio" : {
+            "home": {
+                "title": "Negozios",
+                "createLabel": "Negozio erstellen",
+                "createOrEditLabel": "Negozio erstellen oder bearbeiten"
+            },
+            "created": "Negozio erstellt mit ID {{ param }}",
+            "updated": "Negozio aktualisiert mit ID {{ param }}",
+            "deleted": "Negozio gelöscht mit ID {{ param }}",
+            "delete": {
+                "question": "Soll Negozio {{ id }} wirklich dauerhaft gelöscht werden?"
+            },
+            "detail": {
+                "title": "Negozio"
+            },
+            "codiceNegozio": "Codice Negozio",
+            "descrizioneNegozio": "Descrizione Negozio",
+            "indirizzo": "Indirizzo",
+            "cap": "Cap",
+            "citta": "Citta",
+            "telefono": "Telefono",
+            "operatore": "Operatore"
+        }
+    }
+}
